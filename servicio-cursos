@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cursos?serverTimezone=UTC
+    username: root
+    password: root   
+  jpa:
+    hibernate:
+      naming.implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+      naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+springdoc:
+  packages-to-scan:
+  - com.curso.controller
+  paths-to-match:
+  - /**
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true         # 💡 Usar IP en lugar de nombre de host
+    #hostname: localhost             # Opcional, pero ayuda en local
+    instance-id: ${spring.application.name}:${server.port}
+server:
+  port: 8000 
