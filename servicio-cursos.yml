@@ -18,8 +18,8 @@ eureka:
     service-url:
       defaultZone: http://host.docker.internal:8761/eureka
   instance:
-    prefer-ip-address: true         # 💡 Usar IP en lugar de nombre de host
-    #hostname: localhost             # Opcional, pero ayuda en local
+    prefer-ip-address: false         # 💡 Usar IP en lugar de nombre de host
+    hostname: host.docker.internal             # Opcional, pero ayuda en local
     instance-id: ${spring.application.name}:${server.port}
 server:
   port: 8000 
