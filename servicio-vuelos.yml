@@ -23,4 +23,4 @@ eureka:
     hostname: host.docker.internal             # Opcional, pero ayuda en local
     instance-id: ${spring.application.name}:${server.port}
 server:
-  port: 8000 
+  port: 8100 
