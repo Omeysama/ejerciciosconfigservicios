@@ -1,6 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://localhost:3306/viajes?serverTimezone=UTC
     url: jdbc:mysql://host.docker.internal:3306/viajes?serverTimezone=UTC
     username: root
     password: root   
@@ -20,7 +21,7 @@ eureka:
       #defaultZone: http://localhost:8761/eureka
   instance:
     prefer-ip-address: false         # 💡 Usar IP en lugar de nombre de host
-    #hostname: host.docker.internal             # Opcional, pero ayuda en local con docker
+    hostname: host.docker.internal             # Opcional, pero ayuda en local con docker
     instance-id: ${spring.application.name}:${server.port}
 server:
   port: 8000 
